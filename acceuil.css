@@ -1,0 +1,95 @@
+body, html {
+  font-family: Arial, Helvetica, sans-serif;
+  color : white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  text-align: center;
+}
+
+.gradient-text {
+  font-size: 7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg,black,black,black,black,black,black,black,grey,grey,lightgrey, white,lightgrey,grey,grey,black,black,black,black,black,black,black);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.01s ease-out;
+  background-size: 200% 200%;
+}
+
+.gradient-text2 {
+  font-size: 1rem;
+  font-weight: lighter;
+  background: linear-gradient(90deg,black,black,black,black,black,grey,grey,lightgrey, white,lightgrey,grey,grey,black,black,black,black,black);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.01s ease-out;
+  background-size: 200% 200%;
+}
+
+header h1 {
+  text-align: center;
+  color: greyj;
+}
+
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.name-container h1 {
+  font-size: 4em;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+nav {
+  text-align: center;
+  margin-top: 0px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: transparent;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.31);
+}
+
+.mouse-light {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 80%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}

@@ -1,0 +1,120 @@
+/* Contact Page CSS */
+body, html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #121212;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #888888, #333333, #181818, #121212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.01s ease-out;
+  background-size: 200% 200%;
+}
+
+
+.container {
+  background-color: #181818;
+  color: #E0E0E0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  max-width: 1400px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: #BB86FC;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0A84FF;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Liste des contacts */
+.contact-list {
+  text-align: center;
+}
+
+.contact-list h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #BB86FC;
+}
+
+.contact-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  background-color: #252525;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-list li:hover {
+  transform: scale(1.02);
+}
+
+.contact-list h3 {
+  font-size: 1.5rem;
+  color: #BB86FC;
+  margin-bottom: 5px;
+}
+
+.contact-list p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Boutons */
+.contact-list button {
+  background-color: #BB86FC;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.contact-list button:hover {
+  background-color: #0A84FF;
+}
+
+.sms-button {
+  margin-left: 10px; /* Ajoutez de l'espace entre les boutons */
+}
