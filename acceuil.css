@@ -14,6 +14,42 @@ body, html {
   text-align: center;
 }
 
+/* Ajustement du titre pour mobile */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 4rem; /* Taille réduite pour mobile */
+    font-weight: bold;
+    color: black; /* Texte noir */
+    -webkit-text-stroke: 2px white; /* Contour blanc */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Ombre blanche */
+    background: none; /* Supprime l'effet de gradient */
+  }
+
+  /* Ajustement de la navigation pour mobile */
+  .gradient-text2 {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: white; /* Texte blanc */
+    background: none; /* Supprime l'effet de gradient */
+  }
+
+  /* Navigation en mode responsive */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    justify-content: center; /* Centre les éléments */
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%; /* Affichage en colonne */
+    text-align: center;
+    margin: 5px 0; /* Espacement entre les liens */
+  }
+}
+
+
 .gradient-text {
   font-size: 7rem;
   font-weight: bold;
