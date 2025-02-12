@@ -24,6 +24,26 @@ body, html {
   background-size: 200% 200%;
 }
 
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 4rem; /* Taille réduite sur mobile */
+    text-shadow: 
+      -2px -2px 0 white, 
+       2px -2px 0 white, 
+      -2px  2px 0 white, 
+       2px  2px 0 white; /* Contour ajusté */
+  }
+
+  nav ul {
+    flex-direction: column; /* Menu en colonne sur mobile */
+    text-align: center;
+  }
+
+  .mouse-light {
+    display: none; /* Désactiver l'effet de lumière sur mobile */
+  }
+}
+
 .gradient-text2 {
   font-size: 1rem;
   font-weight: lighter;
