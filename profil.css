@@ -66,6 +66,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: flex;
   justify-content: center;
   gap: 10px;
 }
