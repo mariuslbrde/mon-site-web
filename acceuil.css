@@ -24,24 +24,6 @@ body, html {
   background-size: 200% 200%;
 }
 
-@media (max-width: 768px) {
-  .gradient-text {
-    {
-    font-size: 4rem; /* Réduction du titre */
-    -webkit-text-stroke: 2px white; /* Contour blanc plus fin */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9); /* Ombre blanche plus marquée */
-  }
-
-  nav ul {
-    flex-direction: column; /* Menu en colonne sur mobile */
-    text-align: center;
-  }
-
-  .mouse-light {
-    display: none; /* Désactiver l'effet de lumière sur mobile */
-  }
-}
-
 .gradient-text2 {
   font-size: 1rem;
   font-weight: lighter;
