@@ -26,12 +26,12 @@ body, html {
 
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 4rem; /* Taille réduite sur mobile */
+    font-size: 2rem; /* Taille réduite sur mobile */
     text-shadow: 
-      -2px -2px 0 white, 
-       2px -2px 0 white, 
-      -2px  2px 0 white, 
-       2px  2px 0 white; /* Contour ajusté */
+      -1px -1px 0 white, 
+       1px -1px 0 white, 
+      -1px  1px 0 white, 
+       0.5px  0.5px 0 white; /* Contour ajusté */
   }
 
   nav ul {
