@@ -135,8 +135,10 @@ nav a:hover {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: left;
-  gap: 370px;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .header-image1 {
