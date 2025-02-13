@@ -17,7 +17,7 @@ body, html {
 /* Ajustement du titre pour mobile */
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 3rem !important; /* Taille réduite pour mobile */
+    font-size: 5rem !important; /* Taille réduite pour mobile */
     font-weight: bold !important;
     color: black !important; /* Assure que le texte est bien noir */
     -webkit-text-stroke: 1px white; /* Contour blanc */
@@ -36,8 +36,8 @@ body, html {
 
   /* Navigation en mode responsive */
   nav a {
-    font-size: 1.5rem !important;
-    color: white !important;
+    font-size: 1rem !important;
+    color: #BB86FC !important;
   }
 
   /* Espacement entre les liens */
