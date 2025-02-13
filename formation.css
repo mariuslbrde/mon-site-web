@@ -7,6 +7,11 @@ body, html {
   height: 100%;
   background-color: #121212;
 }
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem; /* Ajuste la taille pour qu'il ne dépasse pas */
+  }
+}
 
 header h1 {
   text-align: center;
