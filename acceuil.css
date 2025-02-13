@@ -17,9 +17,9 @@ body, html {
 /* Ajustement du titre pour mobile */
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 1rem; /* Taille réduite pour mobile */
+    font-size: 0.5rem; /* Taille réduite pour mobile */
     font-weight: bold;
-    color: white; /* Texte noir */
+    color: black;
     -webkit-text-stroke: 1px white; /* Contour blanc */
     text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Ombre blanche */
     background: none; /* Supprime l'effet de gradient */
@@ -35,7 +35,7 @@ body, html {
 
   /* Navigation en mode responsive */
  nav a {
-    color: white !important;
+   color: white !important;
   }
 
   /* Espacement entre les liens */
