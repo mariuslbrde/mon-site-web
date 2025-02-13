@@ -34,18 +34,22 @@ body, html {
   }
 
   /* Navigation en mode responsive */
+ nav a {
+    color: white !important;
+  }
+
+  /* Espacement entre les liens */
   nav ul {
     display: flex;
-    flex-wrap: wrap; /* Permet le retour à la ligne */
-    justify-content: center; /* Centre les éléments */
-    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Ajoute un espacement entre chaque élément */
+    padding: 20px;
   }
 
   nav ul li {
-    display: block;
-    width: 100%; /* Affichage en colonne */
-    text-align: center;
-    margin: 20px 0; /* Espacement entre les liens */
+    width: auto; /* Ajuste la largeur */
+    margin: 10px 0; /* Augmente l'espacement vertical */
   }
   .mouse-light {
     display: none; /* Désactive l'effet de lumière sur mobile */
