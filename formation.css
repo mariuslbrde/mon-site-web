@@ -19,6 +19,13 @@ header h1 {
   background-size: 200% 200%;
 }
 
+@media (max-width: 768px) {
+  .container h2::before,
+  .container h2::after {
+    width: 20% !important;
+  }
+}
+
 .container {
   background-color: #181818;
   color: #E0E0E0;
