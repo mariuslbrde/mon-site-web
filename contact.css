@@ -17,6 +17,7 @@ header h1 {
   -webkit-text-fill-color: transparent;
   transition: background-position 0.01s ease-out;
   background-size: 200% 200%;
+  -webkit-text-stroke: 1px white;
 }
 
 
