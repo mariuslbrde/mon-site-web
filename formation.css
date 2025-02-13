@@ -17,7 +17,6 @@ body, html {
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: unset !important;
     transition: none !important; /* Supprime l'effet de mouvement */
-}
   }
 }
 
