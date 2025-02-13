@@ -27,10 +27,10 @@ body, html {
 
   /* Ajustement de la navigation pour mobile */
   .gradient-text2 {
-   font-size: 0.5rem !important;
-  font-weight: lighter !important;
-  color: white !important;
-  background: none !important;
+    font-size: 0.5rem !important;
+    font-weight: lighter !important;
+    color: white !important;
+    background: none !important;
   }
 
   /* Navigation en mode responsive */
