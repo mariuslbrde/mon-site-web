@@ -17,25 +17,27 @@ body, html {
 /* Ajustement du titre pour mobile */
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 0.5rem; /* Taille réduite pour mobile */
+    font-size: 3rem; /* Taille réduite pour mobile */
     font-weight: bold;
-    color: black;
+    color: black !important; /* Assure que le texte est bien noir */
     -webkit-text-stroke: 1px white; /* Contour blanc */
     text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Ombre blanche */
-    background: none; /* Supprime l'effet de gradient */
+    background: none !important; /* Supprime l'effet de gradient */
+    -webkit-background-clip: unset !important; /* Désactive l'effet qui rend le texte transparent */
   }
 
   /* Ajustement de la navigation pour mobile */
   .gradient-text2 {
-    font-size: 0.5rem !important;
+    font-size: 0.8rem !important;
     font-weight: lighter !important;
     color: white !important;
     background: none !important;
   }
 
   /* Navigation en mode responsive */
- nav a {
-   color: white !important;
+  nav a {
+    font-size: 1.5rem !important;
+    color: white !important;
   }
 
   /* Espacement entre les liens */
