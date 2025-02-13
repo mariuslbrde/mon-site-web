@@ -8,6 +8,19 @@ body, html {
   background-color: #121212;
 }
 
+@media (max-width: 768px) {
+  header h1 {
+    text-align: center !important;
+    font-size: 4rem !important;
+    font-weight: bold !important;
+    color: white !important; /* Rend le texte blanc */
+    background: none !important; /* Supprime le dégradé */
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    transition: none !important; /* Supprime l'effet de mouvement */
+  }
+}
+
 header h1 {
   text-align: center;
   font-size: 4rem;
