@@ -19,7 +19,7 @@ body, html {
   .gradient-text {
     font-size: 2rem; /* Taille réduite pour mobile */
     font-weight: bold;
-    color: black; /* Texte noir */
+    color: white; /* Texte noir */
     -webkit-text-stroke: 1px white; /* Contour blanc */
     text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Ombre blanche */
     background: none; /* Supprime l'effet de gradient */
@@ -29,8 +29,7 @@ body, html {
   .gradient-text2 {
     font-size: 1rem;
     font-weight: lighter;
-    color: black; /* Texte noir */
-    -webkit-text-stroke: 0.3px white; /* Contour blanc */
+    color: white; /* Texte noir */
     background: none; /* Supprime l'effet de gradient */
   }
 
@@ -39,14 +38,14 @@ body, html {
     display: flex;
     flex-wrap: wrap; /* Permet le retour à la ligne */
     justify-content: center; /* Centre les éléments */
-    padding: 10;
+    padding: 30px;
   }
 
   nav ul li {
     display: block;
     width: 100%; /* Affichage en colonne */
     text-align: center;
-    margin: 5px 0; /* Espacement entre les liens */
+    margin: 20px 0; /* Espacement entre les liens */
   }
   .mouse-light {
     display: none; /* Désactive l'effet de lumière sur mobile */
