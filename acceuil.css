@@ -17,8 +17,8 @@ body, html {
 /* Ajustement du titre pour mobile */
 @media (max-width: 768px) {
   .gradient-text {
-    font-size: 3rem; /* Taille réduite pour mobile */
-    font-weight: bold;
+    font-size: 3rem !important; /* Taille réduite pour mobile */
+    font-weight: bold !important;
     color: black !important; /* Assure que le texte est bien noir */
     -webkit-text-stroke: 1px white; /* Contour blanc */
     text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Ombre blanche */
