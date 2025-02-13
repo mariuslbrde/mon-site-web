@@ -24,6 +24,13 @@ header h1 {
   .container h2::after {
     width: 20% !important;
   }
+
+  .skills-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
   header h1{
     text-align: center !important;
     font-size: 4rem !important;
