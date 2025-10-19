@@ -132,3 +132,30 @@ nav a:hover {
 .sms-button {
   margin-left: 10px; /* Ajoutez de l'espace entre les boutons */
 }
+
+.cv-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cv-section h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.cv-section button {
+  background-color: #BB86FC;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cv-section button:hover {
+  background-color: #0A84FF;
+  transform: scale(1.05);
+}
+
