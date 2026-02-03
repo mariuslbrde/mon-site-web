@@ -1,10 +1,11 @@
+// ...existing code...
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mes projets</title>
-  <!-- Styles spécifiques à cette page -->
+  <!-- Styles spécifiques à cette page (même dossier) -->
   <link rel="stylesheet" href="mesprojets.css" />
 </head>
 <body>
@@ -14,47 +15,48 @@
       <p>Projets personnels et universitaires — sélection représentative.</p>
     </header>
 
-    <section id="perso">
-      <h2>Projets personnels</h2>
-      <article class="projet">
-        <h3>Site portfolio 2025</h3>
-        <p>CV en ligne, portfolio et contact. Hébergé via GitHub Pages, vous êtes entrain de le consulter.</p>
-        <p class="tech">Technos : HTML, CSS, (JS)</p>
+    <section id="perso" aria-labelledby="perso-title">
+      <h2 id="perso-title">Projets personnels</h2>
+
+      <article class="projet" aria-labelledby="portfolio-title">
+        <h3 id="portfolio-title">Site portfolio 2025</h3>
+        <p>CV en ligne, portfolio et contact. Hébergé via GitHub Pages — lien à renseigner.</p>
+        <p class="tech">Technos : HTML · CSS · JS</p>
       </article>
 
-      <article class="projet">
-        <h3>Site + base de données pour suivi heures & salaires</h3>
-        <p>Application locale développée pour superviser mes heures et salaires pendant la saison au restaurant. CRUD local, authentification basique, stockage en base locale.</p>
-        <p class="tech">Technos : (backend) + base de données (local)</p>
+      <article class="projet" aria-labelledby="suivi-title">
+        <h3 id="suivi-title">Site + base de données — suivi heures & salaires</h3>
+        <p>Application locale pour superviser heures et salaires pendant la saison au restaurant. CRUD local, authentification basique.</p>
+        <p class="tech">Technos : backend · base de données locale</p>
       </article>
 
-      <article class="projet">
-        <h3>Refonte du site du restaurant</h3>
-        <p>Refonte du site du restaurant (intégration, responsive, optimisation). Exemple public : <a href="https://lamarendabanyuls.eatbu.com/?lang=fr" target="_blank" rel="noopener">lamarendabanyuls.eatbu.com</a></p>
-        <p class="tech">Technos : HTML/CSS, intégration</p>
+      <article class="projet" aria-labelledby="refonte-title">
+        <h3 id="refonte-title">Refonte du site du restaurant</h3>
+        <p>Intégration responsive et optimisation. Exemple public : <a href="https://lamarendabanyuls.eatbu.com/?lang=fr" target="_blank" rel="noopener">lamarendabanyuls.eatbu.com</a></p>
+        <p class="tech">Technos : HTML · CSS · intégration</p>
       </article>
     </section>
 
-    <section id="universitaire">
-      <h2>Projets universitaires</h2>
+    <section id="universitaire" aria-labelledby="uni-title">
+      <h2 id="uni-title">Projets universitaires</h2>
 
-      <article class="projet">
-        <h3>Site communautaire de critiques de films (VM)</h3>
-        <p>Projet web + base de données hébergé sur la VM de l'infra de l'école — plateforme de type Letterboxd. Je mettrai une photo de l'écran d'accueil ici (VM actuellement éteinte).</p>
-        <p><img src="images/vm-accueil.png" alt="Capture d'écran accueil VM (placeholder)" class="screenshot" /></p>
-        <p class="tech">Technos : Web, SQL, déploiement sur VM</p>
+      <article class="projet" aria-labelledby="vm-title">
+        <h3 id="vm-title">Site communautaire de critiques de films (VM)</h3>
+        <p>Plateforme de type Letterboxd déployée sur une VM de l'infra de l'école. Capture d'écran d'accueil à ajouter (VM arrêtée pour l'instant).</p>
+        <img src="images/vm-accueil.png" alt="Capture d'écran accueil VM (placeholder)" class="screenshot" />
+        <p class="tech">Technos : Web · SQL · déploiement sur VM</p>
       </article>
 
-      <article class="projet">
-        <h3>Serveur MAIL (SMTP/POP3)</h3>
-        <p>Projet de programmation en Python : serveur MAIL implémentant protocoles SMTP et POP3 avec sockets et threads pour gérer les connexions concurrentes.</p>
-        <p class="tech">Technos : Python, sockets, threading</p>
+      <article class="projet" aria-labelledby="mail-title">
+        <h3 id="mail-title">Serveur MAIL (SMTP / POP3)</h3>
+        <p>Serveur en Python implémentant SMTP et POP3 avec sockets et threading pour gérer la concurrence.</p>
+        <p class="tech">Technos : Python · sockets · threading</p>
       </article>
 
-      <article class="projet">
-        <h3>Projet MCPR (Java, systèmes répartis)</h3>
-        <p>Projet Java réparti sur plusieurs machines virtuelles de l'infra de l'école pour simuler une plateforme de partage de ressources entre utilisateurs.</p>
-        <p class="tech">Technos : Java, communication réseau RMI, VM</p>
+      <article class="projet" aria-labelledby="mcpr-title">
+        <h3 id="mcpr-title">Projet MCPR (Java, systèmes répartis)</h3>
+        <p>Application Java répartie sur plusieurs VM de l'infra pour simuler une plateforme de partage de ressources entre utilisateurs.</p>
+        <p class="tech">Technos : Java · communication réseau (RMI) · VM</p>
       </article>
     </section>
 
