@@ -1,95 +1,160 @@
 /* ...existing code... */
 
-/* Styles spécifiques à la page Mes projets */
+/* Thème adapté depuis formation.css — style sombre, dégradés violets/bleus */
 
 :root{
-  --bg: #ffffff;
-  --text: #222;
-  --muted: #666;
-  --accent: #0066cc;
-  --border: #ececec;
+  --bg:#121212;
+  --panel:#181818;
+  --text:#E0E0E0;
+  --muted:#B0B0B0;
+  --accent:#BB86FC;
+  --accent-2:#0A84FF;
+  --border:rgba(255,255,255,0.06);
 }
 
-html,body{height:100%}
-body{
+html, body {
+  height:100%;
   margin:0;
   padding:0;
-  background:var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:var(--bg);
   color:var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height:1.5;
   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
+/* Conteneur principal */
 .container{
-  max-width:960px;
-  margin:2rem auto;
-  padding:0 1rem;
+  max-width:1100px;
+  margin:28px auto;
+  padding:28px;
+  background:var(--panel);
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.03);
 }
 
+/* Titre animé / dégradé similaire à formation.css */
 header h1{
-  margin:0 0 .25rem;
-  font-size:1.75rem;
-  font-weight:600;
+  text-align:center;
+  font-size:3.2rem;
+  font-weight:800;
+  margin:6px 0 8px;
+  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #E0E0E0, #888888, #333333, #181818, #121212);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-size:200% 200%;
+  transition:background-position 0.01s ease-out;
 }
 
+/* Sous-titre */
 header p{
-  margin:0 0 1rem;
+  text-align:center;
   color:var(--muted);
+  margin:0 0 18px;
 }
 
+/* Section headings */
 h2{
-  margin:1.25rem 0 .6rem;
-  font-size:1.125rem;
-  padding-bottom:.35rem;
-  border-bottom:1px solid var(--border);
+  position:relative;
+  text-align:center;
   color:var(--text);
+  font-size:1.6rem;
+  margin:22px 0 12px;
+  padding:8px 0;
 }
 
+/* Ligne décorative */
+h2::before,
+h2::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  width:28%;
+  height:1px;
+  background:var(--border);
+}
+h2::before{ left:2%; }
+h2::after{ right:2%; }
+
+/* Projet cards layout */
 .projet{
-  padding:1rem 0;
-  border-top:1px solid var(--border);
+  display:block;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border:1px solid var(--border);
+  padding:14px;
+  margin:12px 0;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.projet:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.6);
 }
 
 .projet h3{
-  margin:0 0 .35rem;
-  font-size:1.05rem;
-}
-
-.projet p{
-  margin:.35rem 0;
+  margin:0 0 6px;
+  font-size:1.15rem;
   color:var(--text);
 }
 
-.tech{
-  font-size:.92rem;
+/* Description et meta */
+.projet p{
+  margin:6px 0;
   color:var(--muted);
+  line-height:1.45;
 }
 
+/* Tag technos */
+.tech{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  font-size:0.92rem;
+  color:var(--text);
+  background: linear-gradient(90deg, rgba(187,134,252,0.12), rgba(10,132,255,0.06));
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Liens */
 a{
   color:var(--accent);
-  text-decoration:underline;
+  text-decoration:none;
 }
+a:hover{ color:var(--accent-2); text-decoration:underline; }
 
+/* Capture d'écran */
 .screenshot{
   display:block;
   max-width:100%;
   height:auto;
-  margin:.5rem 0;
+  margin:10px 0;
+  border-radius:8px;
   border:1px solid var(--border);
-  border-radius:4px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.45);
 }
 
+/* Footer */
 footer{
-  margin-top:2rem;
+  margin-top:20px;
+  text-align:center;
   color:var(--muted);
-  font-size:.95rem;
+  font-size:0.95rem;
+  border-top:1px solid rgba(255,255,255,0.03);
+  padding-top:12px;
 }
 
-/* Responsive léger */
+/* Responsive */
+@media (max-width:900px){
+  header h1{ font-size:2.6rem; }
+  .container{ padding:18px; margin:18px; }
+  h2::before, h2::after { width:18%; }
+}
 @media (max-width:640px){
-  .container{margin:1rem auto;padding:0 .75rem;}
-  header h1{font-size:1.4rem;}
-  h2{font-size:1rem;}
-  .projet{padding:.75rem 0;}
+  header h1{ font-size:2rem; text-align:center; }
+  .container{ padding:14px; margin:12px; }
+  .projet{ padding:12px; }
+  h2{ font-size:1.25rem; }
 }
