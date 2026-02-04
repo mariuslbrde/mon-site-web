@@ -1,11 +1,24 @@
-/* Contact Page CSS */
+/* Thème unifié — style sombre, dégradés violets/bleus */
+
+:root {
+  --bg: #121212;
+  --panel: #181818;
+  --text: #E0E0E0;
+  --muted: #B0B0B0;
+  --accent: #BB86FC;
+  --accent-2: #0A84FF;
+  --border: rgba(255, 255, 255, 0.06);
+}
+
 body, html {
   font-family: Arial, Helvetica, sans-serif;
-  color: #E0E0E0;
+  color: var(--text);
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #121212;
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 768px) {
@@ -13,11 +26,11 @@ body, html {
     text-align: center !important;
     font-size: 4rem !important;
     font-weight: bold !important;
-    color: white !important; /* Rend le texte blanc */
-    background: none !important; /* Supprime le dégradé */
+    color: white !important;
+    background: none !important;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: unset !important;
-    transition: none !important; /* Supprime l'effet de mouvement */
+    transition: none !important;
   }
 }
 
@@ -25,23 +38,23 @@ header h1 {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #888888, #333333, #181818, #121212);
+  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #E0E0E0, #888888, #333333, #181818, #121212);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-position 0.01s ease-out;
   background-size: 200% 200%;
 }
 
-
 .container {
-  background-color: #181818;
-  color: #E0E0E0;
+  background-color: var(--panel);
+  color: var(--text);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   max-width: 1400px;
   margin: 20px auto;
   margin-bottom: 50px;
+  border: 1px solid var(--border);
 }
 
 nav {
@@ -60,7 +73,7 @@ nav ul {
 }
 
 nav a {
-  color: #BB86FC;
+  color: var(--accent);
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 15px;
@@ -69,7 +82,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #0A84FF;
+  color: var(--accent-2);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -81,7 +94,7 @@ nav a:hover {
 .contact-list h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #BB86FC;
+  color: var(--accent);
 }
 
 .contact-list ul {
@@ -90,47 +103,52 @@ nav a:hover {
 }
 
 .contact-list li {
-  background-color: #252525;
+  background: linear-gradient(90deg, rgba(187, 134, 252, 0.08), rgba(10, 132, 255, 0.06));
   padding: 15px;
   margin: 15px 0;
   border-radius: 8px;
   text-align: center;
-  transition: transform 0.2s ease-in-out;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .contact-list li:hover {
-  transform: scale(1.02);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
 }
 
 .contact-list h3 {
   font-size: 1.5rem;
-  color: #BB86FC;
+  color: var(--accent);
   margin-bottom: 5px;
 }
 
 .contact-list p {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: var(--text);
 }
 
 /* Boutons */
 .contact-list button {
-  background-color: #BB86FC;
+  background-color: var(--accent);
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
 .contact-list button:hover {
-  background-color: #0A84FF;
+  background-color: var(--accent-2);
+  transform: scale(1.05);
 }
 
 .sms-button {
-  margin-left: 10px; /* Ajoutez de l'espace entre les boutons */
+  margin-left: 10px;
 }
 
 .cv-section {
@@ -139,12 +157,12 @@ nav a:hover {
 }
 
 .cv-section h2 {
-  color: white;
+  color: var(--text);
   margin-bottom: 15px;
 }
 
 .cv-section button {
-  background-color: #BB86FC;
+  background-color: var(--accent);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -155,7 +173,6 @@ nav a:hover {
 }
 
 .cv-section button:hover {
-  background-color: #0A84FF;
+  background-color: var(--accent-2);
   transform: scale(1.05);
 }
-
