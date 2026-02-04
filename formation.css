@@ -259,3 +259,61 @@ footer {
   background-color: var(--accent-2);
   transform: scale(1.05);
 }
+
+/* ...existing code... */
+
+/* Détails de formation cachés par défaut */
+.formation-details {
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.formation-details h4 {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.formation-details ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0;
+}
+
+.formation-details li {
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.formation-details li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-2);
+}
+
+/* Afficher les détails au survol */
+.formation-item1:hover .formation-details {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
