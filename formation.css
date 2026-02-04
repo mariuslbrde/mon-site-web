@@ -152,55 +152,49 @@ nav a:hover {
 .formation-item3 { background: linear-gradient(90deg,rgba(187,134,252,0.1),rgba(10,132,255,0.1)); }
 .formation-item4 { background: linear-gradient(90deg,rgba(10,132,255,0.12),rgba(187,134,252,0.06)); }
 
-/* ------------------ DETAILS (IMPORTANT) ------------------ */
+/* ------------------ DETAILS CENTRÉS ------------------ */
 
-/* caché par défaut */
 .formation-details {
   display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  margin-top: 10px;
-  padding: 15px;
-  background: rgba(0,0,0,0.95);
-  border-radius: 8px;
+
+  position: fixed; /* <-- clé du centrage */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.97);
+  border-radius: 12px;
   border: 1px solid var(--border);
   text-align: left;
-  z-index: 10;
+  z-index: 1000;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
 }
 
-/* affiché UNIQUEMENT sur item1 */
+/* apparition UNIQUEMENT au hover du bloc 1 */
 .formation-item1:hover .formation-details {
   display: block;
-  animation: fadeIn .25s ease-in;
+  animation: fadeIn .25s ease;
 }
 
+/* animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.formation-details h4 {
-  color: var(--accent);
-}
-
-.formation-details ul {
-  list-style: none;
-  padding: 0;
-}
-
-.formation-details li {
-  padding-left: 20px;
-  position: relative;
-}
-
-.formation-details li::before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  color: var(--accent-2);
-}
 
 /* ------------------ FOOTER ------------------ */
 
