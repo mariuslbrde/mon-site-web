@@ -196,3 +196,55 @@ footer{
 .contact-link:hover{
   background:var(--accent-2);
 }
+
+/* ---------------- PROJETS & INFOS ---------------- */
+
+.info-projets{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.info-card{
+  background:linear-gradient(90deg, rgba(187,134,252,0.12), rgba(10,132,255,0.06));
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:25px;
+  width:300px;
+  text-align:center;
+  transition:0.25s;
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+}
+
+.info-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.7);
+}
+
+.info-card h3{
+  color:var(--accent);
+  margin-bottom:10px;
+}
+
+.info-card p{
+  color:var(--text);
+  font-size:0.95rem;
+  margin-bottom:20px;
+}
+
+.info-btn{
+  display:inline-block;
+  padding:12px 18px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.2s;
+}
+
+.info-btn:hover{
+  background:var(--accent-2);
+  transform:scale(1.05);
+}
