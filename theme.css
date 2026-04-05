@@ -68,9 +68,9 @@ html, body {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 50px;
+  width: 100px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 30%;
   background-color: var(--bg-secondary);
   border: 2px solid var(--accent-1);
   color: var(--accent-1);
@@ -95,7 +95,7 @@ html, body {
 
 /* HEADER UNIFIÉ */
 header {
-  padding: 40px 20px;
+  padding: 20px 10px;
   text-align: center;
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   background-clip: padding-box;
