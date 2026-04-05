@@ -1,178 +1,70 @@
-/* Thème unifié — style sombre, dégradés violets/bleus */
+@import 'theme.css';
 
-:root {
-  --bg: #121212;
-  --panel: #181818;
-  --text: #E0E0E0;
-  --muted: #B0B0B0;
-  --accent: #BB86FC;
-  --accent-2: #0A84FF;
-  --border: rgba(255, 255, 255, 0.06);
-}
-
-body, html {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    text-align: center !important;
-    font-size: 4rem !important;
-    font-weight: bold !important;
-    color: white !important;
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    transition: none !important;
-  }
-}
-
-header h1 {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #E0E0E0, #888888, #333333, #181818, #121212);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.01s ease-out;
-  background-size: 200% 200%;
-}
-
-.container {
-  background-color: var(--panel);
-  color: var(--text);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  max-width: 1400px;
-  margin: 20px auto;
-  margin-bottom: 50px;
-  border: 1px solid var(--border);
-}
-
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--accent-2);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Liste des contacts */
 .contact-list {
   text-align: center;
 }
 
 .contact-list h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--accent);
+  margin-bottom: 30px;
+  color: var(--accent-1);
 }
 
 .contact-list ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   padding: 0;
+  margin: 0;
 }
 
 .contact-list li {
-  background: linear-gradient(90deg, rgba(187, 134, 252, 0.08), rgba(10, 132, 255, 0.06));
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-1);
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
 }
 
 .contact-list li:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  border-color: var(--accent-2);
 }
 
 .contact-list h3 {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-bottom: 5px;
+  color: var(--accent-1);
+  margin-top: 0;
 }
 
 .contact-list p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--text);
-}
-
-/* Boutons */
-.contact-list button {
-  background-color: var(--accent);
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.contact-list button:hover {
-  background-color: var(--accent-2);
-  transform: scale(1.05);
-}
-
-.sms-button {
-  margin-left: 10px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 10px 0 20px;
 }
 
 .cv-section {
-  text-align: center;
   margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--accent-light), rgba(139, 92, 246, 0.1));
+  border-radius: 12px;
+  border: 2px solid var(--accent-2);
+  text-align: center;
 }
 
 .cv-section h2 {
-  color: var(--text);
-  margin-bottom: 15px;
+  color: var(--accent-2);
 }
 
-.cv-section button {
-  background-color: var(--accent);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.cv-section button:hover {
-  background-color: var(--accent-2);
-  transform: scale(1.05);
+@media (max-width: 768px) {
+  .contact-list ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contact-list li {
+    padding: 20px;
+  }
 }

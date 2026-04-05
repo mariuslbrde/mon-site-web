@@ -1,142 +1,71 @@
-body, html {
-  font-family: Arial, Helvetica, sans-serif;
-  color : white;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+/* Page d'accueil - Spécialisation */
+@import 'theme.css';
+
+.accent-home {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-light) 100%);
+  border: 2px solid var(--accent-1);
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  text-align: center;
+.accent-home::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
 }
-
-/* Ajustement du titre pour mobile */
-@media (max-width: 768px) {
-  .gradient-text {
-    font-size: 5rem !important; /* Taille réduite pour mobile */
-    font-weight: bold !important;
-    color: black !important; /* Assure que le texte est bien noir */
-    -webkit-text-stroke: 1px white; /* Contour blanc */
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8); /* Ombre blanche */
-    background: none !important; /* Supprime l'effet de gradient */
-    -webkit-background-clip: unset !important; /* Désactive l'effet qui rend le texte transparent */
-  }
-
-  /* Ajustement de la navigation pour mobile */
-  .gradient-text2 {
-    font-size: 0.8rem !important;
-    font-weight: lighter !important;
-    color: #BB86FC !important;
-    background: none !important;
-  }
-
-  /* Navigation en mode responsive */
-  nav a {
-    font-size: 1rem !important;
-    color: #BB86FC !important;
-  }
-
-  /* Espacement entre les liens */
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Ajoute un espacement entre chaque élément */
-    padding: 20px;
-  }
-
-  nav ul li {
-    width: auto; /* Ajuste la largeur */
-    margin: 10px 0; /* Augmente l'espacement vertical */
-  }
-  .mouse-light {
-    display: none; /* Désactive l'effet de lumière sur mobile */
-  }
-
-  
-}
-
 
 .gradient-text {
-  font-size: 7rem;
-  font-weight: bold;
-  background: linear-gradient(90deg,black,black,black,black,black,black,black,grey,grey,lightgrey, white,lightgrey,grey,grey,black,black,black,black,black,black,black);
+  font-size: clamp(2rem, 15vw, 5rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
   -webkit-background-clip: text;
-  color: transparent;
-  transition: background-position 0.01s ease-out;
-  background-size: 200% 200%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin: 30px 0;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.gradient-text2 {
-  font-size: 1rem;
-  font-weight: lighter;
-  background: linear-gradient(90deg,black,black,black,black,black,grey,grey,lightgrey, white,lightgrey,grey,grey,black,black,black,black,black);
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: background-position 0.01s ease-out;
-  background-size: 200% 200%;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
 }
 
-header h1 {
-  text-align: center;
-  color: greyj;
-}
-
-.name-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  flex-direction: column;
-}
-
-.name-container h1 {
-  font-size: 4em;
-  padding: 50px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 nav {
-  text-align: center;
-  margin-top: 0px;
+  margin: 30px 0 0;
 }
 
-nav ul {
-  list-style: none;
-  padding: 10px;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav a {
-  color: transparent;
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-nav a:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.31);
-}
-
-.mouse-light {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 80%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
+@media (max-width: 768px) {
+  .accent-home::before {
+    width: 350px;
+    height: 350px;
+    top: -30%;
+    right: -5%;
+  }
+  
+  .gradient-text {
+    font-size: 2.5rem;
+  }
 }

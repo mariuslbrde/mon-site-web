@@ -4,15 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mes projets</title>
-  <!-- Styles spécifiques à cette page (même dossier) -->
+  <link rel="stylesheet" href="theme.css" />
   <link rel="stylesheet" href="mesprojets.css" />
 </head>
 <body>
+  <button class="theme-toggle" aria-label="Basculer le thème">🌙</button>
+  
   <main class="container">
     <header>
       <h1>Mes projets</h1>
       <p>Projets personnels et universitaires — sélection représentative.</p>
     </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li><a href="experience.html">Expérience</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <section id="perso" aria-labelledby="perso-title">
       <h2 id="perso-title">Projets personnels</h2>
@@ -63,5 +75,7 @@
       <p>Retour : <a href="formation.html">Formations</a></p>
     </footer>
   </main>
+  
+  <script src="script.js"></script>
 </body>
 </html>

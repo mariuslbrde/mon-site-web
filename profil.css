@@ -1,259 +1,102 @@
-/* Thème unifié — style sombre, dégradés violets/bleus */
+@import 'theme.css';
 
-:root {
-  --bg: #121212;
-  --panel: #181818;
-  --text: #E0E0E0;
-  --muted: #B0B0B0;
-  --accent: #BB86FC;
-  --accent-2: #0A84FF;
-  --border: rgba(255, 255, 255, 0.06);
-}
-
-body, html {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-header h1 {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #121212, #181818, #333333, #888888, #E0E0E0, #E0E0E0, #888888, #333333, #181818, #121212);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.01s ease-out;
-  background-size: 200% 200%;
-}
-
-@media (max-width: 768px) {
-  .container h2::before,
-  .container h2::after {
-    width: 20% !important;
-  }
-
-  .skills-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  header h1{
-    text-align: center !important;
-    font-size: 4rem !important;
-    font-weight: bold !important;
-    color: white !important;
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    transition: none !important;
-  }
-}
-
-.container h2 {
-  position: relative;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 20px 0;
-  color: var(--text);
-}
-
-.container h2::before,
-.container h2::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 1px;
-  background-color: var(--border);
-}
-
-.container h2::before {
-  left: 0;
-}
-
-.container h2::after {
-  right: 0;
-}
-
-.container {
-  background-color: var(--panel);
-  color: var(--text);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  max-width: 1400px;
-  margin: 20px auto;
-  margin-bottom: 50px;
-  border: 1px solid var(--border);
-}
-
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--accent-2);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.header-image1 {
-  width: 200px;
-  height: auto;
-  border-radius: 20px;
-  margin-left: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--border);
-}
-
-/* COMPÉTENCES & DISTINCTIONS */
 .skills-dist-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin: 30px 0;
 }
 
 .skills-container {
-  margin-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
-  justify-content: center;
+}
+
+.skill-item {
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .dist-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
-  justify-content: center;
-}
-
-.skill-item{
-  background: linear-gradient(90deg, rgba(187, 134, 252, 0.12), rgba(10, 132, 255, 0.08));
-  color: var(--text);
-  padding: 12px;
-  border-radius: 8px;
-  width: 160px;
-  text-align: center;
-  font-weight: bold;
-  border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  margin: 20px 0;
 }
 
 .dist-item {
-  background: linear-gradient(90deg, rgba(10, 132, 255, 0.1), rgba(187, 134, 252, 0.1));
-  color: var(--text);
-  padding: 12px;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  color: white;
   border-radius: 8px;
-  width: 160px;
   text-align: center;
-  font-weight: bold;
-  border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 
-.skill-item:hover, .dist-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
-}
-
-/* HOBBIES */
-.hobbies-content {
-  margin-top: 40px;
+.dist-item:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .hobbies-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
-  justify-content: center;
+  margin: 20px 0;
 }
 
 .hobby-item {
-  background: linear-gradient(90deg, rgba(187, 134, 252, 0.14), rgba(10, 132, 255, 0.08));
-  color: var(--text);
-  padding: 12px;
-  border-radius: 8px;
-  width: 160px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border: 2px solid var(--accent-1);
+  border-radius: 12px;
   text-align: center;
-  font-weight: bold;
-  border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 
 .hobby-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  transform: translateY(-6px) rotate(2deg);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-2);
+  background: linear-gradient(135deg, var(--accent-light), rgba(139, 92, 246, 0.1));
 }
 
-footer {
-  justify-content: center;
-  text-align: center;
-  background-color: var(--panel);
-  color: var(--text);
-  padding: 10px;
-  margin-top: 20px;
-  font-size: 0.8rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  gap: 100px;
+.dist-content,
+.hobbies-content {
+  margin: 40px 0;
 }
 
-.contact-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.contact-link:hover {
-  background-color: var(--accent-2);
-  transform: scale(1.05);
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dist-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .hobbies-container {
+    grid-template-columns: 1fr;
+  }
 }
