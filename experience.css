@@ -5,7 +5,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   margin: 30px 0;
-  perspective: 1000px;
 }
 
 .experience-item1,
@@ -22,10 +21,7 @@
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: auto;
 }
 
 .experience-item1::before,
@@ -34,47 +30,50 @@
 .experience-item4::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 4px;
   height: 100%;
-  background: radial-gradient(circle, var(--accent-1), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-  z-index: 0;
+  background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+  transition: width 0.3s ease;
 }
 
 .experience-item1:hover,
 .experience-item2:hover,
 .experience-item3:hover,
 .experience-item4:hover {
-  transform: translateY(-8px) rotateX(5deg);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-1);
 }
 
 .experience-item1:hover::before {
-  opacity: 0.15;
-  background-color: var(--accent-1);
+  width: 6px;
 }
 
 .experience-item2:hover::before {
-  opacity: 0.15;
-  background-color: var(--accent-2);
+  width: 6px;
 }
 
 .experience-item3:hover::before {
-  opacity: 0.15;
-  background-color: var(--accent-3);
+  width: 6px;
 }
 
 .experience-item4:hover::before {
-  opacity: 0.15;
-  background-color: var(--accent-1);
+  width: 6px;
+}
+
+.experience-item1 h3,
+.experience-item2 h3,
+.experience-item3 h3,
+.experience-item4 h3 {
+  color: var(--accent-1);
+  transition: var(--transition);
+  margin: 10px 0 5px;
 }
 
 .experience-item1:hover h3 {
-  color: var(--accent-1);
+  color: var(--accent-2);
 }
 
 .experience-item2:hover h3 {
@@ -82,22 +81,29 @@
 }
 
 .experience-item3:hover h3 {
-  color: var(--accent-3);
+  color: var(--accent-2);
 }
 
 .experience-item4:hover h3 {
-  color: var(--accent-1);
+  color: var(--accent-2);
 }
 
 .experience-item1 p,
 .experience-item2 p,
 .experience-item3 p,
 .experience-item4 p {
-  position: relative;
-  z-index: 1;
   margin: 0;
   color: var(--text-secondary);
   font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.experience-item1 br,
+.experience-item2 br,
+.experience-item3 br,
+.experience-item4 br {
+  display: block;
+  content: "";
 }
 
 @media (max-width: 768px) {
@@ -110,7 +116,7 @@
   .experience-item2,
   .experience-item3,
   .experience-item4 {
-    min-height: auto;
     padding: 20px;
+    min-height: auto;
   }
 }
