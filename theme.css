@@ -85,11 +85,10 @@ html, body {
 
 .theme-toggle:hover {
   background-color: var(--accent-light);
-  transform: scale(1.1) rotate(20deg);
 }
 
 .theme-toggle:active {
-  transform: scale(0.95) rotate(20deg);
+  opacity: 0.8;
 }
 
 /* HEADER UNIFIÉ */
