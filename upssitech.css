@@ -1,133 +1,162 @@
 @import 'theme.css';
 
-.upssitech-content h2 {
-  color: var(--text-primary);
-  margin-top: 0;
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: var(--bg-secondary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
-.upssitech-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
-  margin-bottom: 50px;
-  margin-top: 30px;
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--accent-1);
 }
 
-.upssitech-item {
+header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 15px;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  font-size: 1.8rem;
   color: var(--text-primary);
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.module {
+  display: block;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border: 2px solid var(--border-color);
   padding: 25px;
+  margin-bottom: 20px;
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
-  border: 2px solid var(--border-color);
-  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
-  text-align: center;
   transition: var(--transition);
-  cursor: pointer;
-  position: relative;
   overflow: hidden;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
-/* Barres de couleur unique pour chaque item */
-.upssitech-item1 {
-  border-left: 5px solid var(--accent-1);
+.module::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+  transition: width 0.3s ease;
 }
 
-.upssitech-item2 {
-  border-left: 5px solid var(--accent-2);
-}
-
-.upssitech-item3 {
-  border-left: 5px solid var(--accent-3);
-}
-
-.upssitech-item4 {
-  border-left: 5px solid var(--accent-1);
-}
-
-/* Fond dégradé au hover */
-.upssitech-item1:hover {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+.module:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--accent-1);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
 }
 
-.upssitech-item2:hover {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
-  border-color: var(--accent-2);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+.module:hover::before {
+  width: 6px;
 }
 
-.upssitech-item3:hover {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(236, 72, 153, 0.05));
-  border-color: var(--accent-3);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-
-.upssitech-item4:hover {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
-  border-color: var(--accent-1);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-
-.upssitech-item h3 {
-  color: var(--text-primary);
+.module h3 {
   margin-top: 0;
-  transition: var(--transition);
-}
-
-.upssitech-item1:hover h3 {
   color: var(--accent-1);
+  font-size: 1.3rem;
+  transition: var(--transition);
+  margin-left: 10px;
 }
 
-.upssitech-item2:hover h3 {
+.module:hover h3 {
   color: var(--accent-2);
 }
 
-.upssitech-item3:hover h3 {
-  color: var(--accent-3);
+.module h4 {
+  color: var(--text-secondary);
+  margin: 15px 0 10px;
+  margin-left: 10px;
+  font-weight: 600;
 }
 
-.upssitech-item4:hover h3 {
-  color: var(--accent-1);
+.module p {
+  color: var(--text-secondary);
+  margin: 10px 0 15px;
+  line-height: 1.6;
+  margin-left: 10px;
 }
 
-.upssitech-item ul {
+.module ul {
   list-style: none;
-  padding: 0;
-  margin: 15px 0 0;
-  text-align: left;
+  padding-left: 20px;
+  margin: 0;
 }
 
-.upssitech-item li {
+.module li {
   padding: 6px 0;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
+  position: relative;
 }
 
-.upssitech-item li::before {
+.module li::before {
   content: '→ ';
   color: var(--accent-1);
-  margin-right: 8px;
+  position: absolute;
+  left: -15px;
   font-weight: bold;
 }
 
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  border-top: 2px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--accent-1);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
-  .upssitech-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  main {
+    margin: 20px 10px;
+    padding: 20px;
   }
   
-  .upssitech-item {
-    min-height: auto;
-    padding: 20px;
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .module {
+    padding: 15px;
+    margin-bottom: 15px;
   }
 }

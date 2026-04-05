@@ -70,7 +70,7 @@ html, body {
   right: 20px;
   width: 100px;
   height: 50px;
-  border-radius: 30%;
+  border-radius: 90%;
   background-color: var(--bg-secondary);
   border: 2px solid var(--accent-1);
   color: var(--accent-1);
