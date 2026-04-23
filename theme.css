@@ -4,46 +4,46 @@
 
 :root {
   /* MODE CLAIR (défaut) */
-  --bg-primary: #F8F9FA;
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #F0F2F5;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F5;
+  --bg-tertiary: #E8E8E8;
   
-  --text-primary: #1A202C;
-  --text-secondary: #4A5568;
-  --text-muted: #718096;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7A7A;
   
-  --accent-1: #1E40AF;        /* Bleu foncé */
-  --accent-2: #0284C7;        /* Bleu ciel */
-  --accent-3: #475569;        /* Gris-bleu */
-  --accent-light: #DBEAFE;    /* Bleu très clair */
+  --accent-1: #000000;        /* Noir */
+  --accent-2: #333333;        /* Gris foncé */
+  --accent-3: #666666;        /* Gris moyen */
+  --accent-light: #D0D0D0;    /* Gris clair */
   
-  --border-color: #E2E8F0;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+  --border-color: #CCCCCC;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
   
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* MODE SOMBRE */
 html[data-theme="dark"] {
-  --bg-primary: #0F172A;
-  --bg-secondary: #1E293B;
-  --bg-tertiary: #334155;
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2A2A2A;
   
-  --text-primary: #F1F5F9;
-  --text-secondary: #CBD5E1;
-  --text-muted: #94A3B8;
+  --text-primary: #F0F0F0;
+  --text-secondary: #C0C0C0;
+  --text-muted: #888888;
   
-  --accent-1: #3B82F6;
-  --accent-2: #06B6D4;
-  --accent-3: #64748B;
-  --accent-light: #1E3A8A;
+  --accent-1: #FFFFFF;
+  --accent-2: #E0E0E0;
+  --accent-3: #B0B0B0;
+  --accent-light: #333333;
   
-  --border-color: #475569;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --border-color: #404040;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* BASE GLOBALE */
@@ -58,7 +58,7 @@ html, body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: var(--transition);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -66,14 +66,14 @@ html, body {
 /* BOUTON DE THÈME (pour tous les pages) */
 .theme-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 200px;
+  top: 15px;
+  right: 15px;
+  width: 50px;
   height: 50px;
   background-color: var(--bg-secondary);
   border: 2px solid var(--accent-1);
   color: var(--accent-1);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -81,10 +81,12 @@ html, body {
   transition: var(--transition);
   box-shadow: var(--shadow-md);
   z-index: 1000;
+  border-radius: 8px;
 }
 
 .theme-toggle:hover {
   background-color: var(--accent-light);
+  transform: scale(1.05);
 }
 
 .theme-toggle:active {
@@ -93,7 +95,7 @@ html, body {
 
 /* HEADER UNIFIÉ */
 header {
-  padding: 20px 10px;
+  padding: 25px 10px;
   text-align: center;
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   background-clip: padding-box;
@@ -101,18 +103,18 @@ header {
 }
 
 header h1 {
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: 800;
-  letter-spacing: -1px;
-  color: white;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  color: var(--bg-primary);
+  text-shadow: none;
   animation: slideDown 0.6s ease-out;
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -124,32 +126,32 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .header-image1 {
-  width: 180px;
-  height: 180px;
-  border-radius: 20px;
-  border: 4px solid white;
-  box-shadow: var(--shadow-lg);
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  border: 3px solid var(--bg-primary);
+  box-shadow: var(--shadow-md);
   object-fit: cover;
   transition: var(--transition);
 }
 
 .header-image1:hover {
-  transform: scale(1.05) rotateZ(-2deg);
+  transform: scale(1.03) rotateZ(-1deg);
 }
 
 /* NAVIGATION */
 nav {
   background-color: var(--bg-secondary);
-  padding: 16px 0;
+  padding: 12px 0;
   box-shadow: var(--shadow-sm);
-  margin: 20px 0;
+  margin: 15px 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -161,8 +163,8 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 20px;
+  gap: 15px;
+  padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -171,11 +173,12 @@ nav a {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 6px;
   transition: var(--transition);
   position: relative;
+  border-bottom: 2px solid transparent;
 }
 
 nav a::after {
@@ -185,7 +188,7 @@ nav a::after {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  background: var(--accent-1);
   transition: var(--transition);
   transform: translateX(-50%);
 }
@@ -196,16 +199,16 @@ nav a:hover {
 }
 
 nav a:hover::after {
-  width: calc(100% - 32px);
+  width: calc(100% - 28px);
 }
 
 /* CONTENEUR PRINCIPAL */
 .container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 40px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 30px;
   background-color: var(--bg-secondary);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   transition: var(--transition);
@@ -217,53 +220,52 @@ nav a:hover::after {
 
 /* TITRES */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0;
 }
 
 h2 {
-  font-size: 2rem;
-  margin: 30px 0 20px;
+  font-size: 1.8rem;
+  margin: 25px 0 15px;
   color: var(--text-primary);
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
 }
 
 h2::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
+  left: 0;
+  width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  background: var(--accent-1);
   border-radius: 2px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
-  margin: 15px 0 10px;
+  margin: 12px 0 8px;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
 }
 
 /* BOUTONS */
 button, .info-btn, .contact-link {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid var(--accent-1);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: var(--transition);
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  color: white;
+  background: var(--accent-1);
+  color: var(--bg-primary);
   text-decoration: none;
   box-shadow: var(--shadow-sm);
 }
@@ -271,7 +273,8 @@ button, .info-btn, .contact-link {
 button:hover, .info-btn:hover, .contact-link:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  background: var(--accent-2);
+  border-color: var(--accent-2);
 }
 
 button:active, .info-btn:active, .contact-link:active {
@@ -281,12 +284,12 @@ button:active, .info-btn:active, .contact-link:active {
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px 20px;
+  padding: 25px 20px;
   color: var(--text-muted);
   border-top: 1px solid var(--border-color);
-  margin-top: 40px;
+  margin-top: 30px;
   background-color: var(--bg-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 footer a {
@@ -306,13 +309,13 @@ footer a:hover {
   .theme-toggle {
     width: 45px;
     height: 45px;
-    font-size: 1.1rem;
-    top: 15px;
-    right: 15px;
+    font-size: 1rem;
+    top: 12px;
+    right: 12px;
   }
   
   header h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .header-content {
@@ -320,8 +323,8 @@ footer a:hover {
   }
   
   .header-image1 {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
   
   nav ul {
@@ -329,20 +332,20 @@ footer a:hover {
   }
   
   nav a {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
   
   .container {
-    margin: 20px 10px;
+    margin: 15px 10px;
     padding: 20px;
   }
   
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
