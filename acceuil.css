@@ -1,83 +1,53 @@
 @import 'theme.css';
 
 .accent-home {
-  background: var(--bg-secondary);
-  border: none;
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-}
-
-.split-layout {
-  display: flex;
-}
-
-.left-section {
-  flex: 1;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  padding: 60px 30px;
+  text-align: center;
 }
 
 .gradient-text {
-  font-size: clamp(2.5rem, 10vw, 4rem);
+  font-size: clamp(2.5rem, 12vw, 3.5rem);
   font-weight: 900;
-  color: white;
-  margin: 0;
-  line-height: 1.2;
-  text-align: center;
-  animation: slideIn 0.8s ease-out;
-}
-
-.right-section {
-  flex: 1;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.right-section nav {
-  margin: 0 0 40px 0;
-}
-
-.right-section nav ul {
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.right-section nav a {
-  font-size: 1rem;
-  padding: 8px 0;
-}
-
-.right-content {
-  max-width: 500px;
-}
-
-.right-content h2 {
-  font-size: 1.8rem;
-  margin: 0 0 20px 0;
   color: var(--text-primary);
-  padding-bottom: 0;
+  margin: 30px 0 50px;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.right-content h2::after {
-  display: none;
+.home-content {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.right-content p {
-  font-size: 1.05rem;
+.intro-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.intro-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.intro-section p {
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  margin-bottom: 30px;
-  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
-.explore-btn {
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
   display: inline-block;
   padding: 12px 28px;
   background: var(--accent-1);
@@ -89,65 +59,87 @@
   box-shadow: var(--shadow-sm);
 }
 
-.explore-btn:hover {
-  transform: translateX(4px);
+.cta-btn:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+  background: var(--accent-2);
 }
 
-@keyframes slideIn {
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.link-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.link-card:hover {
+  border-color: var(--accent-1);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.link-card h3 {
+  font-size: 1.3rem;
+  color: var(--accent-1);
+  margin-bottom: 10px;
+}
+
+.link-card p {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.link-card a {
+  color: var(--accent-1);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.link-card a:hover {
+  color: var(--accent-2);
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 1024px) {
-  .split-layout {
-    flex-direction: column;
-  }
-  
-  .left-section {
-    min-height: 50vh;
-    padding: 40px 30px;
-  }
-  
-  .right-section {
-    padding: 40px 30px;
-    justify-content: flex-start;
-    padding-top: 60px;
-  }
-  
-  .right-section nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
+    transform: translateY(0);
   }
 }
 
 @media (max-width: 768px) {
   .accent-home {
-    min-height: auto;
-  }
-  
-  .left-section {
-    min-height: 45vh;
-    padding: 30px 20px;
+    padding: 40px 15px;
   }
   
   .gradient-text {
     font-size: 2rem;
+    margin-bottom: 30px;
   }
   
-  .right-section {
-    padding: 30px 20px;
+  .intro-section {
+    padding: 25px;
+    margin-bottom: 25px;
   }
   
-  .right-content h2 {
-    font-size: 1.4rem;
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .quick-links {
+    grid-template-columns: 1fr;
   }
 }

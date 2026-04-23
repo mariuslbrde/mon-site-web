@@ -68,7 +68,7 @@ html, body {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 80px;
+  width: 60px;
   height: 34px;
   background-color: #CCCCCC;
   border: none;
@@ -85,7 +85,7 @@ html, body {
 .theme-toggle::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 30px;
   height: 30px;
   background-color: white;
   border-radius: 50%;
