@@ -21,7 +21,7 @@ if (themeToggle) {
 
 function updateThemeToggleIcon(theme) {
   if (themeToggle) {
-    themeToggle.textContent = theme === 'light' ? 'Mode sombre' : 'Mode clair';
+    themeToggle.textContent = theme === 'light' ? '☼' : '☽';
   }
 }
 
