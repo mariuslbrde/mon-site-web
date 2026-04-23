@@ -83,14 +83,19 @@ html, body {
 }
 
 .theme-toggle::after {
-  content: '';
-  display: block;
+  content: '☀';
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   background-color: white;
   border-radius: 50%;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  color: #FFA500;
+  font-weight: bold;
 }
 
 .theme-toggle:hover {
@@ -107,7 +112,9 @@ html[data-theme="dark"] .theme-toggle {
 }
 
 html[data-theme="dark"] .theme-toggle::after {
+  content: '🌙';
   transform: translateX(26px);
+  color: #4A90E2;
 }
 
 @media (max-width: 768px) {
@@ -121,6 +128,7 @@ html[data-theme="dark"] .theme-toggle::after {
   .theme-toggle::after {
     width: 28px;
     height: 28px;
+    font-size: 1rem;
   }
   
   html[data-theme="dark"] .theme-toggle::after {
