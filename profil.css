@@ -43,7 +43,7 @@
 .skill-item {
   padding: 10px 16px;
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  color: white;
+  color: var(--bg-primary);
   border-radius: 20px;
   text-align: center;
   font-weight: 600;
@@ -70,7 +70,7 @@
 .dist-item {
   padding: 18px;
   background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
-  color: white;
+  color: var(--bg-primary);
   border-radius: 12px;
   text-align: center;
   font-weight: 600;
@@ -84,7 +84,7 @@
 .dist-item:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: var(--shadow-md);
-  border-color: white;
+  border-color: var(--bg-primary);
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
 }
 

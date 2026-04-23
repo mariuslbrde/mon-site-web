@@ -63,34 +63,69 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* BOUTON DE THÈME (pour tous les pages) */
+/* BOUTON TOGGLE THÈME - STYLE APPLE */
 .theme-toggle {
   position: fixed;
-  top: 15px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-secondary);
-  border: 2px solid var(--accent-1);
-  color: var(--accent-1);
-  font-size: 1.2rem;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+  background-color: #CCCCCC;
+  border: none;
+  border-radius: 17px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  box-shadow: var(--shadow-md);
+  padding: 2px;
+  transition: background-color 0.3s ease;
+  box-shadow: var(--shadow-sm);
   z-index: 1000;
-  border-radius: 8px;
+}
+
+.theme-toggle::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle:hover {
-  background-color: var(--accent-light);
-  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .theme-toggle:active {
   opacity: 0.8;
+}
+
+/* TOGGLE EN MODE SOMBRE */
+html[data-theme="dark"] .theme-toggle {
+  background-color: #333333;
+}
+
+html[data-theme="dark"] .theme-toggle::after {
+  transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 55px;
+    height: 32px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .theme-toggle::after {
+    width: 28px;
+    height: 28px;
+  }
+  
+  html[data-theme="dark"] .theme-toggle::after {
+    transform: translateX(23px);
+  }
 }
 
 /* HEADER UNIFIÉ */
@@ -306,14 +341,6 @@ footer a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .theme-toggle {
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
-    top: 12px;
-    right: 12px;
-  }
-  
   header h1 {
     font-size: 1.6rem;
   }
