@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stage MGI Consultant - Dependency Track</title>
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="stage-mgi.css" />
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Basculer le thème">.</button>
+  
+  <main class="container">
+    <header>
+      <h1>Stage MGI Consultant</h1>
+      <p>Optimisation et automatisation de Dependency Track dans le cadre du maintien en condition de sécurité des systèmes satellitaires</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li><a href="experience.html">Expérience</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="resume" aria-labelledby="resume-title">
+      <h2 id="resume-title">Résumé du stage</h2>
+
+      <article class="projet" aria-labelledby="resume-stage-title">
+        <h3 id="resume-stage-title">Contexte général</h3>
+        <p>J’ai réalisé un stage de 4 mois, du 7 avril au 7 août 2026, au sein de MGI Consultants, en prestation chez Thales Alenia Space, dans l’équipe Maintien en Condition de Sécurité.</p>
+        <p>Le stage portait sur l’optimisation de l’usage de Dependency Track pour mieux gérer les vulnérabilités logicielles dans un contexte spatial, avec un objectif de centralisation, d’automatisation et d’enrichissement des sources.</p>
+        <p class="tech">Contexte : cybersécurité, SBOM, Dependency Track, MCS</p>
+      </article>
+
+      <article class="projet" aria-labelledby="rapport-title">
+        <h3 id="rapport-title">Rapport final</h3>
+        <p>Tu peux consulter mon rapport complet en cliquant sur le lien ci-dessous.</p>
+        <p>
+          <a href="rapport-stage-final.pdf" target="_blank" rel="noopener">Consulter le rapport final du stage</a>
+        </p>
+        <p class="tech">PDF du rapport de stage</p>
+      </article>
+    </section>
+
+    <section id="entreprise" aria-labelledby="entreprise-title">
+      <h2 id="entreprise-title">Présentation de l’entreprise et de l’équipe</h2>
+
+      <article class="projet" aria-labelledby="mgi-title">
+        <h3 id="mgi-title">MGI Consultants et Thales Alenia Space</h3>
+        <p>MGI Consultants m’a accueilli dans le cadre d’une mission réalisée chez Thales Alenia Space, au sein d’un environnement orienté infrastructure, cybersécurité et automatisation.</p>
+        <p>Mon travail s’est inscrit dans la dynamique de l’équipe MCS, qui gère le suivi de la sécurité logicielle et la qualification des vulnérabilités sur les systèmes satellitaires.</p>
+        <p class="tech">Équipe : MCS</p>
+      </article>
+    </section>
+
+    <section id="missions" aria-labelledby="missions-title">
+      <h2 id="missions-title">Missions réalisées</h2>
+
+      <article class="projet" aria-labelledby="dt-title">
+        <h3 id="dt-title">Configuration et prise en main de Dependency Track</h3>
+        <p>J’ai commencé par déployer et configurer mon environnement de test, prendre en main l’interface de Dependency Track, créer des projets et importer des SBOMs pour comprendre le comportement natif de la plateforme.</p>
+        <p>Cette étape m’a permis d’identifier les limites du matching passif et de mieux comprendre le fonctionnement de la Vulnerability Analysis Task.</p>
+        <p class="tech">Docker · PostgreSQL · API REST</p>
+      </article>
+
+      <article class="projet" aria-labelledby="sources-title">
+        <h3 id="sources-title">Enrichissement des sources de vulnérabilités</h3>
+        <p>J’ai travaillé sur l’ajout de sources complémentaires à la NVD, notamment GitHub Advisories, Google OSV, Sonatype OSS Index, Trivy, Vulnerability Lookup, CERT-FR et CERT-EUVD.</p>
+        <p>L’objectif était de réduire la dépendance à une seule base et d’améliorer la couverture des vulnérabilités, en particulier pour les formats modernes comme PURL, OSV et CSAF.</p>
+        <p class="tech">NVD · OSV · CSAF 2.0 · CERT-FR · CERT-EUVD</p>
+      </article>
+
+      <article class="projet" aria-labelledby="reporting-title">
+        <h3 id="reporting-title">Rapports et analyses automatiques</h3>
+        <p>J’ai développé des scripts pour automatiser le marquage des vulnérabilités exploitées et la veille sur les vulnérabilités critiques.</p>
+        <p>Ces outils ont été intégrés dans des pipelines GitLab CI afin de produire des rapports exploitables automatiquement et de prévenir l’équipe dès qu’une vulnérabilité critique apparaissait.</p>
+        <p class="tech">Python · GitLab CI · Webhook Discord · EPSS · CVSS</p>
+      </article>
+
+      <article class="projet" aria-labelledby="migration-title">
+        <h3 id="migration-title">Migration de Dependency Track vers la version 4.14.1</h3>
+        <p>J’ai mis en place une procédure de Dry Run en trois phases pour tester la migration avant son passage en production : copie de données, qualification sur données réelles, puis bascule effective.</p>
+        <p>Cette migration a permis de sécuriser la mise à jour et d’améliorer la fiabilité du serveur de production.</p>
+        <p class="tech">Migration · Dry Run · Production</p>
+      </article>
+
+      <article class="projet" aria-labelledby="triage-title">
+        <h3 id="triage-title">Optimisation de l’utilisation de Dependency Track</h3>
+        <p>J’ai analysé les limites du matching sur les noms de composants et proposé des outils de fuzzy matching et de gestion d’alias pour rapprocher les composants similaires.</p>
+        <p>J’ai aussi développé un outil de triage interactif en ligne de commande pour simplifier le traitement des vulnérabilités détectées sur les projets.</p>
+        <p class="tech">Fuzzy matching · Levenshtein · Triage · Alias</p>
+      </article>
+    </section>
+
+    <section id="apports" aria-labelledby="apports-title">
+      <h2 id="apports-title">Résultats et apports</h2>
+
+      <article class="projet" aria-labelledby="prod-title">
+        <h3 id="prod-title">Résultats utilisés en production</h3>
+        <p>Deux éléments ont été retenus et utilisés en production par l’équipe : le script de veille/notification des vulnérabilités critiques et la version 4.14.1 de Dependency Track après migration.</p>
+        <p>Ces réalisations ont apporté un vrai gain de temps, une meilleure centralisation et une réduction du risque lié à la gestion des vulnérabilités.</p>
+        <p class="tech">Apports : automatisation, réduction du risque, centralisation</p>
+      </article>
+
+      <article class="projet" aria-labelledby="skills-title">
+        <h3 id="skills-title">Compétences développées</h3>
+        <p>Ce stage m’a permis de progresser en développement Python orienté API REST, en administration de serveur, en automatisation CI/CD et en compréhension des standards de l’écosystème des vulnérabilités.</p>
+        <p>J’ai aussi renforcé ma méthode de travail, ma capacité d’adaptation et ma documentation technique.</p>
+        <p class="tech">Compétences techniques et organisationnelles</p>
+      </article>
+    </section>
+
+    <section id="galerie" aria-labelledby="galerie-title">
+      <h2 id="galerie-title">Galerie</h2>
+
+      <article class="projet" aria-labelledby="images-title">
+        <h3 id="images-title">Aperçus du stage</h3>
+        <p>Tu peux ajouter ici les captures de ton rapport, des schémas d’architecture, des vues de Dependency Track ou des images des scripts et pipelines.</p>
+        <img src="stage-mgi-1.png" alt="Capture du stage MGI 1" class="screenshot" />
+        <img src="stage-mgi-2.png" alt="Capture du stage MGI 2" class="screenshot" />
+        <img src="stage-mgi-3.png" alt="Capture du stage MGI 3" class="screenshot" />
+      </article>
+    </section>
+
+    <footer>
+      <p><a href="rapport-stage-final.pdf" target="_blank" rel="noopener">Ouvrir le rapport final</a> · Retour : <a href="experience.html">Expérience</a></p>
+    </footer>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
