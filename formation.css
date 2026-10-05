@@ -14,7 +14,8 @@
 .formation-item1,
 .formation-item2,
 .formation-item3,
-.formation-item4 {
+.formation-item4,
+.formation-item5 {
   padding: 25px;
   border-radius: 12px;
   border: 2px solid var(--border-color);
@@ -66,11 +67,21 @@
   height: 3px;
   background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
 }
+.formation-item5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
+}
 
 .formation-item1:hover,
 .formation-item2:hover,
 .formation-item3:hover,
-.formation-item4:hover {
+.formation-item4:hover,
+.formation-item5:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-1);
@@ -92,6 +103,10 @@
   color: var(--accent-1);
 }
 
+.formation-item5:hover h3 {
+  color: var(--accent-1);
+}
+
 .formation-details {
   display: none;
   margin-top: 20px;
@@ -103,7 +118,8 @@
 .formation-item1:hover .formation-details,
 .formation-item2:hover .formation-details,
 .formation-item3:hover .formation-details,
-.formation-item4:hover .formation-details {
+.formation-item4:hover .formation-details,
+.formation-item5:hover .formation-details {
   display: block;
   animation: slideDown 0.4s ease-out;
 }
